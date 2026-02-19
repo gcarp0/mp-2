@@ -6,8 +6,7 @@ import { Joke } from "./interfaces/joke.ts";
 const ParentDiv = styled.div`
   width: 80vw;
   margin: auto;
-  border: 5px solid navy;
-  background-color: #fff8b0;
+  border: 5px solid #fff8b0;
   font-family: "Comic Sans MS", cursive, sans-serif;
   color: white;
 `;
@@ -17,7 +16,7 @@ export default function App() {
 
   useEffect(() => {
     async function fetchData(): Promise<void> {
-      const rawData = await fetch("https://official-joke-api.appspot.com/random_joke");
+      const rawData = await fetch("https://official-joke-api.appspot.com/jokes/ten");
       const results: Joke[] = await rawData.json();
       setData(results);
     }

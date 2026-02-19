@@ -6,17 +6,16 @@ const AllJokesDiv = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  background-color: #fff8b0;
-  padding: 20px;
+  background-color: #f7f6daff;
+  padding: 30px;
 `;
 
 const SingleJokeDiv = styled.div`
   background-color: #fff8b0;
-  color: white;
-  border: 2px solid #1e90ff;
+  color: #041f3cff;
+  border: 3px solid #041f3cff;
   font-family: "Comic Sans MS", cursive, sans-serif;
   padding: 15px;
-  width: 250px;
   text-align: center;
   border-radius: 5px;
 `;
@@ -31,8 +30,7 @@ export default function Jokes({ data }: Props) {
       {data.map((joke, index) => (
         <SingleJokeDiv key={index}>
           <h2>{joke.setup}</h2>
-          <p>{joke.punchline}</p>
-          <p style={{ fontStyle: "italic", color: "white" }}>Type: {joke.type}</p>
+          <p style={{ fontStyle: "italic", color: "red" }}>{joke.punchline}</p>
         </SingleJokeDiv>
       ))}
     </AllJokesDiv>
